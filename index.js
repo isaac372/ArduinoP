@@ -1,7 +1,9 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
-app.use(cors({ credentials: true, origin: true }));
+const bodyParser = require("body-parser");
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 //modelo de la base de datos
 const modelTemp = require("./config/models/Modeltemp");
 ///base de datos
