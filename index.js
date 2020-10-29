@@ -17,7 +17,9 @@ app.get('/arduino', async(req,res)=>{
   }
 })
 
-
+app.get("/", (req, resp) => {
+    resp.send("HOLa mundo como se encuentran hoy");
+  });
 const port = process.env.PORT || 4000;
 app.listen(port, "0.0.0.0", () => {
   console.log(`el puerto esta funcionando  ${port}`);
